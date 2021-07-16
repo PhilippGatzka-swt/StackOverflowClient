@@ -1,0 +1,57 @@
+t_user
+[
+    id,
+    username,
+    email,
+    password
+]
+
+t_issue
+[
+    id,
+    title,
+    content,
+    user_id,
+    upvotes,
+    downvotes,
+    resolved,
+]
+
+t_tag
+[
+    id,
+    name
+]
+
+t_comment
+[
+    id,
+    content,
+    user_id,
+    issue_id,
+    answer_id
+]
+
+t_answer
+[
+    id,
+    content,
+    issue_id,
+    user_id,
+    upvotes,
+    downvotes,
+    resolving
+]
+
+t_issue_tag
+[
+    issue_id,
+    tag_id
+]
+
+
+
+
+
+
+

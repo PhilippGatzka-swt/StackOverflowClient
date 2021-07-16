@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="parent" maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.sowatec.stackoverflowclient.Controller">
+    <left>
+        <BorderPane styleClass="sidebar-color" stylesheets="@../css/dark.css">
+            <top>
+                <VBox BorderPane.alignment="CENTER">
+                    <Button id="main-button" onAction="#actionMain" alignment="CENTER" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 0;" stylesheets="@../css/dark.css" textAlignment="CENTER">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                  <styleClass>
+                     <String fx:value="default-side-button" />
+                     <String fx:value="sidebar-color" />
+                     <String fx:value="image-button" />
+                  </styleClass>
+                    </Button>
+                </VBox>
+            </top>
+            <bottom>
+                <VBox BorderPane.alignment="CENTER">
+                    <Button id="account-button" alignment="CENTER" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" onAction="#actionAccount" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                  <styleClass>
+                     <String fx:value="default-side-button" />
+                     <String fx:value="sidebar-color" />
+                     <String fx:value="image-button" />
+                  </styleClass>
+                    </Button>
+                    <Button id="info-button" alignment="CENTER" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                        <styleClass>
+                            <String fx:value="sidebar-color" />
+                            <String fx:value="image-button" />
+                            <String fx:value="default-side-button" />
+                        </styleClass>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button id="settings-button" alignment="CENTER" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" stylesheets="@../css/styles.css" textAlignment="CENTER">
+                        <styleClass>
+                            <String fx:value="sidebar-color" />
+                            <String fx:value="default-side-button" />
+                            <String fx:value="image-button" />
+                        </styleClass>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </left>
+    <top>
+        <BorderPane styleClass="topbar-color" stylesheets="@../css/dark.css" BorderPane.alignment="CENTER">
+            <right>
+                <HBox BorderPane.alignment="CENTER">
+                    <Button id="add-button" mnemonicParsing="false" onAction="#actionAdd" prefHeight="70.0" prefWidth="70.0" stylesheets="@../css/dark.css">
+                        <styleClass>
+                            <String fx:value="default-top-button" />
+                            <String fx:value="image-button" />
+                            <String fx:value="topbar-color" />
+                        </styleClass>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                </HBox>
+            </right>
+            <left>
+                <ImageView fitHeight="60.0" fitWidth="60.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </BorderPane.margin>
+                    <Image url="@../image/logo.png" />
+                </ImageView>
+            </left>
+        </BorderPane>
+    </top>
+    <center>
+        <Pane fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" styleClass="content-color" stylesheets="@../css/dark.css" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </Pane>
+    </center>
+</BorderPane>
