@@ -1,5 +1,7 @@
 package main.java.com.sowatec.stackoverflowclient.dbo;
 
+import main.java.com.sowatec.stackoverflowclient.database.DatabaseExecutor;
+
 public class IssueDBO extends AbstractDBO {
     private int id;
     private String title;
@@ -67,5 +69,9 @@ public class IssueDBO extends AbstractDBO {
 
     public void setResolved(boolean resolved) {
         this.resolved = resolved;
+    }
+
+    public UserDBO getUserDBO() {
+        return DatabaseExecutor.getExecutor().getUserByID(user_id);
     }
 }

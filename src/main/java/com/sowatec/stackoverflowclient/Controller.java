@@ -6,10 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import main.java.com.sowatec.stackoverflowclient.panes.AccountPane;
-import main.java.com.sowatec.stackoverflowclient.panes.AddPane;
-import main.java.com.sowatec.stackoverflowclient.panes.LoginPane;
-import main.java.com.sowatec.stackoverflowclient.panes.RegisterPane;
+import main.java.com.sowatec.stackoverflowclient.database.DatabaseExecutor;
+import main.java.com.sowatec.stackoverflowclient.dbo.UserDBO;
+import main.java.com.sowatec.stackoverflowclient.panes.*;
 
 public class Controller {
 
@@ -77,7 +76,9 @@ public class Controller {
 
     public void showMainPane() {
         if (!model.loggedId()) {
-            showLoginPane();
+            UserDBO userDBO = DatabaseExecutor.getExecutor().getUser("Admin", Util.hash("admin"));
+            Controller.getInstance().getModel().setUser(userDBO);
+            //showLoginPane();
             return;
         }
         parent.setCenter(new MainPane());
